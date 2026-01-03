@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RightMajor - Platform Penentuan Jurusan & Persiapan Kuliah</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header & Navigasi -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fas fa-graduation-cap"></i>
+          <span>RightMajor</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#test">Tes Minat</a></li>
+        </ul>
+        <!-- <div class="auth-buttons">
+          <a class="btn-login" href="login.html">Masuk</a>
+          <a class="btn-register" href="register.html">Daftar Gratis</a>
+        </div> -->
+        <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Temukan Jurusan <span class="highlight">Ideal</span> untuk Masa Depanmu</h1>
+        <p>Platform edukasi yang membantu siswa SMA dan mahasiswa menentukan jurusan dan mempersiapkan kuliah dengan tepat.</p>
+        <div class="hero-buttons">
+          <a href="/kuesioner.html" class="btn-primary" id="startTestBtn">Mulai Tes Minat<span class="emphasis">GRATIS!</span></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="matt-ragland-02z1I7gv4ao-unsplash.jpg" alt="Siswa belajar" />
+      </div>
+    </section>
+
+    <!-- Program Pre-College -->
+    <section id="programs" class="programs">
+      <h2 class="section-title">Layanan Kami</h2>
+      <p class="section-subtitle">Coba jurusan sebelum benar-benar memutuskan untuk meminimalisir risiko salah jurusan</p>
+
+      <div class="program-cards">
+        <div class="program-card">
+          <h3 class="card-header">Langganan Tes Minat Bakat</h3>
+          <div class="program-price">
+            <span class="price">Rp49.000</span>
+            <span class="period">/tahun</span>
+          </div>
+          <ul class="program-features">
+            <li><i class="fas fa-check"></i> Lakukan tes sepuasnya</li>
+            <li><i class="fas fa-check"></i> Insight berupa detail skill oriented</li>
+            <li><i class="fas fa-check"></i> Dasboard untuk tracking kecocokan jurusan & karir</li>
+          </ul>
+          <a href="https://wa.me/89509017248" class="btn-primary" id="consultBtn"><i class="fab fa-whatsapp"></i> Hubungi Kami</a>
+        </div>
+        <div class="program-card">
+          <h3 class="card-header">Konsultasi<br />Hasil Tes</h3>
+          <div class="program-price">
+            <span class="price">Rp39.000</span>
+            <span class="period">/sesi</span>
+          </div>
+          <ul class="program-features">
+            <li><i class="fas fa-check"></i> Membandingkan jurusan yang potensial dan yang diminati</li>
+            <li><i class="fas fa-check"></i> Improvisasi jurusan dari hasil tes</li>
+            <li><i class="fas fa-check"></i> Konsultasi kapan saja</li>
+            <li><i class="fas fa-check"></i> Roadmap kuliah</li>
+          </ul>
+          <a href="https://wa.me/89509017248" class="btn-primary" id="consultBtn"><i class="fab fa-whatsapp"></i> Hubungi Kami</a>
+        </div>
+        <div class="program-card">
+          <h3 class="card-header">Program <br />Pra Kuliah</h3>
+          <div class="program-price">
+            <span class="price">Rp499.000</span>
+            <span class="period">/bulan</span>
+          </div>
+          <ul class="program-features">
+            <li><i class="fas fa-check"></i> Akses ke modul jurusan pilihan</li>
+            <li><i class="fas fa-check"></i> Pembelajaran berbasis projek nyata</li>
+            <li><i class="fas fa-check"></i> Konsultasi kapan saja</li>
+            <li><i class="fas fa-check"></i> Roadmap kuliah</li>
+          </ul>
+          <a href="/jadwal.html" class="btn-primary" id="consultBtn">Lihat Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Pengguna -->
+    <section class="target-users">
+      <h2 class="section-title">Untuk Siapa RightMajor?</h2>
+      <p class="section-subtitle">Platform ini dirancang khusus untuk membantu Anda dalam perjalanan akademik</p>
+
+      <div class="users-grid">
+        <div class="user-card">
+          <div class="user-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3>Siswa SMA</h3>
+          <p>Yang masih bingung menentukan jurusan kuliah yang tepat sesuai minat dan bakat.</p>
+        </div>
+
+        <div class="user-card">
+          <div class="user-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Fresh Graduate SMA</h3>
+          <p>Yang baru lulus dan membutuhkan panduan untuk mempersiapkan diri masuk kuliah.</p>
+        </div>
+
+        <div class="user-card">
+          <div class="user-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Gap Year Student</h3>
+          <p>Yang mengambil jeda sebelum kuliah dan ingin memastikan pilihan jurusan yang tepat.</p>
+        </div>
+
+        <div class="user-card">
+          <div class="user-icon">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+          <h3>Mahasiswa Ragu Jurusan</h3>
+          <p>Yang sudah kuliah tapi merasa salah jurusan dan butuh bantuan untuk pindah jurusan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Halaman Tes Minat -->
+    <section id="test" class="test-section">
+      <h2 class="section-title">Tes Minat & Bakat Gratis</h2>
+      <p class="section-subtitle">Ikuti tes sederhana untuk mendapatkan rekomendasi jurusan yang sesuai dengan kepribadian Anda</p>
+
+      <!-- Tahap 1: Landing Page Tes -->
+      <div class="test-container" id="testLanding">
+        <div class="test-landing">
+          <div class="test-landing-content">
+            <h3>Siap menemukan jurusan ideal Anda?</h3>
+            <p>Tes ini akan membantu Anda:</p>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Mengidentifikasi minat dan bakat Anda</li>
+              <li><i class="fas fa-check-circle"></i> Memahami kepribadian dan gaya belajar</li>
+              <li><i class="fas fa-check-circle"></i> Mendapatkan rekomendasi jurusan yang sesuai</li>
+              <li><i class="fas fa-check-circle"></i> Mengetahui prospek karier dari setiap jurusan</li>
+            </ul>
+            <div class="test-info">
+              <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>Waktu: 10-15 menit</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-question-circle"></i>
+                <span>36 pertanyaan</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-redo"></i>
+                <span>Bisa diulang kapan saja</span>
+              </div>
+            </div>
+            <a href="/kuesioner.html" class="btn-primary">Mulai Tes Sekarang</a>
+          </div>
+          <div class="test-landing-image">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tes minat bakat" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tahap 2: Halaman Tes (Tersembunyi Awalnya) -->
+      <div class="test-container hidden" id="testQuestions">
+        <div class="test-header">
+          <div class="test-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">Pertanyaan <span id="currentQuestion">1</span> dari <span id="totalQuestions">20</span></div>
+          </div>
+        </div>
+
+        <div class="question-container">
+          <h3 class="question" id="questionText">Pertanyaan akan muncul di sini...</h3>
+          <div class="options-container" id="optionsContainer">
+            <!-- Opsi akan dimuat melalui JavaScript -->
+          </div>
+        </div>
+
+        <div class="test-navigation">
+          <button class="btn-secondary" id="prevBtn" disabled><i class="fas fa-arrow-left"></i> Sebelumnya</button>
+          <button class="btn-primary" id="nextBtn">Selanjutnya <i class="fas fa-arrow-right"></i></button>
+          <button class="btn-primary hidden" id="finishBtn">Lihat Hasil <i class="fas fa-chart-bar"></i></button>
+        </div>
+      </div>
+
+      <!-- Tahap 3: Hasil Tes (Tersembunyi Awalnya) -->
+      <div class="test-container hidden" id="testResults">
+        <div class="results-header">
+          <h3>Hasil Tes Minat & Bakat Anda</h3>
+          <p>Berdasarkan jawaban Anda, berikut rekomendasi jurusan yang sesuai</p>
+        </div>
+
+        <div class="results-content">
+          <div class="personality-summary">
+            <h4>Profil Kepribadian MBTI Anda</h4>
+            <div class="personality-traits">
+              <div class="trait">
+                <span class="trait-name">Tipe MBTI:</span>
+                <span class="trait-value" id="interestCategoryMBTI">INTJ</span>
+              </div>
+              <div class="trait">
+                <span class="trait-name">Gaya Belajar:</span>
+                <span class="trait-value" id="learningStyleMBTI">Analitis & Mandiri</span>
+              </div>
+              <div class="trait">
+                <span class="trait-name">Kekuatan:</span>
+                <span class="trait-value" id="personalityTypeMBTI">Strategis & Visioner</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="personality-summary">
+            <h4>Profil DISC Anda</h4>
+            <div class="personality-traits">
+              <div class="trait">
+                <span class="trait-name">Tipe DISC:</span>
+                <span class="trait-value" id="interestCategoryDISC">Dominance (D)</span>
+              </div>
+              <div class="trait">
+                <span class="trait-name">Gaya Belajar:</span>
+                <span class="trait-value" id="learningStyleDISC">Aktif & Mandiri</span>
+              </div>
+              <div class="trait">
+                <span class="trait-name">Kepribadian:</span>
+                <span class="trait-value" id="personalityTypeDISC">Tegas & Berorientasi Hasil</span>
+              </div>
+            </div>
+
+            <div class="personality-description" id="personalityDescription">
+              <!-- Deskripsi akan dimuat melalui JavaScript -->
+            </div>
+            <div class="personality-strengths">
+              <h4>Kekuatan Utama:</h4>
+              <ul id="strengthsList">
+                <!-- Daftar kekuatan akan dimuat melalui JavaScript -->
+              </ul>
+            </div>
+            <div class="work-environment">
+              <h4>Lingkungan Kerja Ideal:</h4>
+              <p id="workEnvironment"></p>
+            </div>
+          </div>
+
+          <div class="recommendations">
+            <h4>Rekomendasi Jurusan untuk Anda</h4>
+            <div class="recommendation-cards" id="recommendationCards">
+              <!-- Rekomendasi akan dimuat melalui JavaScript -->
+            </div>
+          </div>
+
+          <div class="career-prospects">
+            <h4>Gambaran Karier</h4>
+            <p>Berdasarkan jurusan yang direkomendasikan, berikut prospek karier yang dapat Anda tekuni:</p>
+            <div class="career-list" id="careerList">
+              <!-- Daftar karier akan dimuat melalui JavaScript -->
+            </div>
+          </div>
+
+          <div class="results-actions">
+            <button class="btn-primary" id="retakeTestBtn"><i class="fas fa-redo"></i> Ulangi Tes</button>
+            <button class="btn-secondary" id="saveResultsBtn"><i class="fas fa-download"></i> Simpan Hasil</button>
+            <button class="btn-secondary" id="consultResultBtn"><i class="fab fa-whatsapp"></i> Konsultasi</button>
+            <button class="btn-secondary" id="viewProgramsBtn"><i class="fas fa-university"></i> Lihat Program Pre-College</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>RightMajor</span>
+          </div>
+          <p>Platform edukasi yang membantu siswa SMA dan mahasiswa menentukan jurusan dan mempersiapkan kuliah dengan tepat.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Fitur</h4>
+          <ul>
+            <li><a href="#test">Tes Minat & Bakat</a></li>
+            <li><a href="#programs">Program Pre-College</a></li>
+            <li><a href="#programs">Program Pindah Jurusan</a></li>
+            <li><a href="#features">Roadmap Kuliah</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Perusahaan</h4>
+          <ul>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Kontak</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> hello@rightmajor.id</li>
+            <li><i class="fas fa-phone"></i> +62 89509017248</li>
+            <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 RightMajor. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar - Jurusanku Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Navigasi -->
+    <header class="auth-header">
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Jurusanku</span>
+        </div>
+        <div class="back-to-home">
+          <a href="index.html" class="btn-text"> <i class="fas fa-arrow-left"></i> Kembali ke Beranda </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Container Utama -->
+    <main class="auth-container">
+      <div class="auth-wrapper">
+        <!-- Panel Kiri: Gambar & Info -->
+        <div class="auth-left-panel">
+          <div class="auth-hero">
+            <h1>Bergabung dengan Jurusanku</h1>
+            <p>Mulai perjalanan Anda untuk menemukan jurusan ideal dan mempersiapkan kuliah dengan tepat.</p>
+
+            <div class="auth-benefits">
+              <h3>Manfaat Bergabung:</h3>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div class="benefit-content">
+                  <h4>Tes Minat & Bakat Lengkap</h4>
+                  <p>Akses tes psikologi lengkap yang dapat diulang kapan saja.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-road"></i>
+                </div>
+                <div class="benefit-content">
+                  <h4>Roadmap Kuliah Personal</h4>
+                  <p>Dapatkan panduan persiapan kuliah sesuai jurusan pilihan Anda.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-university"></i>
+                </div>
+                <div class="benefit-content">
+                  <h4>Program Pre-College</h4>
+                  <p>Coba jurusan sebelum memutuskan dengan program khusus.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="benefit-content">
+                  <h4>Komunitas Eksklusif</h4>
+                  <p>Bergabung dengan komunitas siswa dan mentor berpengalaman.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-stats">
+              <div class="user-stat">
+                <h3>10.000+</h3>
+                <p>Siswa Terbantu</p>
+              </div>
+              <div class="user-stat">
+                <h3>50+</h3>
+                <p>Jurusan Tersedia</p>
+              </div>
+              <div class="user-stat">
+                <h3>98%</h3>
+                <p>Kepuasan Pengguna</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel Kanan: Form Daftar -->
+        <div class="auth-right-panel">
+          <div class="auth-form-container">
+            <div class="auth-form-header">
+              <h2>Daftar Akun Baru</h2>
+              <p>Sudah punya akun? <a href="login.html" class="auth-link">Masuk di sini</a></p>
+            </div>
+
+            <!-- Form Daftar -->
+            <form id="registerForm" class="auth-form">
+              <!-- Langkah 1: Data Dasar -->
+              <div class="form-step active" id="step1">
+                <h3 class="step-title">Data Dasar</h3>
+
+                <div class="form-group">
+                  <label for="fullName">Nama Lengkap</label>
+                  <div class="input-with-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullName" name="fullName" placeholder="Nama lengkap Anda" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="registerEmail">Email</label>
+                  <div class="input-with-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="registerEmail" name="email" placeholder="nama@email.com" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="registerPassword">Kata Sandi</label>
+                  <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="registerPassword" name="password" placeholder="Minimal 8 karakter" required />
+                    <button type="button" class="toggle-password" id="toggleRegPassword">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                  <div class="password-strength">
+                    <div class="strength-meter">
+                      <div class="strength-fill" id="passwordStrength"></div>
+                    </div>
+                    <div class="strength-text" id="passwordStrengthText">Kekuatan kata sandi</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="confirmPassword">Konfirmasi Kata Sandi</label>
+                  <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Ulangi kata sandi" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="acceptTerms" required />
+                    <span class="checkmark"></span>
+                    Saya setuju dengan <a href="#">Syarat & Ketentuan</a> dan <a href="#">Kebijakan Privasi</a>
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="newsletter" />
+                    <span class="checkmark"></span>
+                    Saya ingin menerima informasi terbaru dan penawaran dari Jurusanku
+                  </label>
+                </div>
+
+                <button type="button" class="btn-primary btn-block" id="nextStepBtn">Lanjut <i class="fas fa-arrow-right"></i></button>
+              </div>
+
+              <!-- Langkah 2: Profil Tambahan -->
+              <div class="form-step hidden" id="step2">
+                <h3 class="step-title">Profil Anda</h3>
+
+                <div class="form-group">
+                  <label for="userType">Saya adalah</label>
+                  <div class="user-type-selector">
+                    <div class="user-type-option active" data-value="siswa">
+                      <i class="fas fa-user-graduate"></i>
+                      <span>Siswa SMA</span>
+                    </div>
+                    <div class="user-type-option" data-value="freshgraduate">
+                      <i class="fas fa-user-tie"></i>
+                      <span>Fresh Graduate</span>
+                    </div>
+                    <div class="user-type-option" data-value="gapyear">
+                      <i class="fas fa-calendar-alt"></i>
+                      <span>Gap Year Student</span>
+                    </div>
+                    <div class="user-type-option" data-value="mahasiswa">
+                      <i class="fas fa-exchange-alt"></i>
+                      <span>Mahasiswa</span>
+                    </div>
+                  </div>
+                  <input type="hidden" id="userType" name="userType" value="siswa" />
+                </div>
+
+                <div class="form-group">
+                  <label for="educationLevel">Tingkat Pendidikan</label>
+                  <select id="educationLevel" name="educationLevel" class="form-select">
+                    <option value="">Pilih tingkat pendidikan</option>
+                    <option value="sma_kelas10">SMA Kelas 10</option>
+                    <option value="sma_kelas11">SMA Kelas 11</option>
+                    <option value="sma_kelas12">SMA Kelas 12</option>
+                    <option value="lulus_sma">Lulus SMA</option>
+                    <option value="mahasiswa_semester1">Mahasiswa Semester 1-2</option>
+                    <option value="mahasiswa_semester3">Mahasiswa Semester 3-4</option>
+                    <option value="mahasiswa_semester5">Mahasiswa Semester 5-6</option>
+                    <option value="mahasiswa_semester7">Mahasiswa Semester 7-8</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="targetMajor">Jurusan yang diminati (opsional)</label>
+                  <select id="targetMajor" name="targetMajor" class="form-select">
+                    <option value="">Pilih jurusan yang diminati</option>
+                    <option value="teknik">Teknik & Teknologi</option>
+                    <option value="kedokteran">Kedokteran & Kesehatan</option>
+                    <option value="sains">Sains & Matematika</option>
+                    <option value="sosial">Sosial & Humaniora</option>
+                    <option value="ekonomi">Ekonomi & Bisnis</option>
+                    <option value="seni">Seni & Desain</option>
+                    <option value="pendidikan">Pendidikan & Keguruan</option>
+                    <option value="belum_tahu">Belum Tahu</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="studyGoal">Tujuan bergabung dengan Jurusanku</label>
+                  <select id="studyGoal" name="studyGoal" class="form-select">
+                    <option value="">Pilih tujuan utama</option>
+                    <option value="cari_jurusan">Mencari jurusan yang tepat</option>
+                    <option value="persiapan_kuliah">Persiapan masuk kuliah</option>
+                    <option value="coba_jurusan">Mencoba jurusan sebelum kuliah</option>
+                    <option value="pindah_jurusan">Pertimbangan pindah jurusan</option>
+                    <option value="eksplorasi_karier">Eksplorasi karier</option>
+                  </select>
+                </div>
+
+                <div class="step-navigation">
+                  <button type="button" class="btn-secondary" id="prevStepBtn"><i class="fas fa-arrow-left"></i> Kembali</button>
+                  <button type="submit" class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="divider">
+              <span>atau daftar dengan</span>
+            </div>
+
+            <div class="social-login">
+              <button type="button" class="social-btn google-btn"><i class="fab fa-google"></i> Google</button>
+              <button type="button" class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</button>
+            </div>
+
+            <div class="auth-footer">
+              <p>Dengan mendaftar, Anda menyetujui <a href="#">Syarat & Ketentuan</a> dan <a href="#">Kebijakan Privasi</a> kami.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal Sukses Daftar -->
+    <div class="modal hidden" id="successModal">
+      <div class="modal-content success-modal">
+        <div class="modal-header">
+          <h3>Pendaftaran Berhasil!</h3>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h4>Selamat Bergabung di Jurusanku!</h4>
+          <p>Akun Anda telah berhasil dibuat. Sekarang Anda dapat:</p>
+          <ul class="success-features">
+            <li><i class="fas fa-check"></i> Mengakses tes minat bakat gratis</li>
+            <li><i class="fas fa-check"></i> Mendapatkan rekomendasi jurusan personal</li>
+            <li><i class="fas fa-check"></i> Menjelajahi program Pre-College</li>
+          </ul>
+          <div class="modal-actions">
+            <button class="btn-primary" id="goToDashboardBtn"><i class="fas fa-tachometer-alt"></i> Ke Dashboard</button>
+            <button class="btn-secondary" id="takeTestBtn"><i class="fas fa-clipboard-check"></i> Mulai Tes Minat</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="register-script.js"></script>
+  </body>
+</html>

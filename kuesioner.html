@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tes Minat Bakat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li>
+            <a href="/index.html"><i class="fas fa-arrow-left"></i>Kembali Ke Beranda</a>
+          </li>
+        </ul>
+        <a href="/index.html" class="logo">
+          <i class="fas fa-graduation-cap"></i>
+          <span>RightMajor</span>
+        </a>
+        <!-- <div class="auth-buttons">
+          <a class="btn-login" href="login.html">Masuk</a>
+          <a class="btn-register" href="register.html">Daftar Gratis</a>
+        </div> -->
+        <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <section id="test" class="test-section">
+      <!-- Tahap 1: Landing Page Tes -->
+      <div class="test-container" id="userDataForm">
+        <div class="form-header" style="text-align: center; margin-bottom: 30px">
+          <h3>Lengkapi Data Dirimu</h3>
+          <p>Data ini digunakan untuk personalisasi sertifikat dan hasil tes Anda.</p>
+        </div>
+        <form id="personalDataForm" style="max-width: 500px; margin: 0 auto">
+          <div style="margin-bottom: 20px">
+            <label style="display: block; margin-bottom: 8px; font-weight: 500">Nama Lengkap</label>
+            <input type="text" id="userName" required style="width: 100%; padding: 12px; border: 1px solid var(--light-gray); border-radius: 8px" />
+          </div>
+          <div style="margin-bottom: 20px">
+            <label style="display: block; margin-bottom: 8px; font-weight: 500">Email Aktif</label>
+            <input type="email" id="userEmail" required style="width: 100%; padding: 12px; border: 1px solid var(--light-gray); border-radius: 8px" />
+          </div>
+          <div style="margin-bottom: 30px">
+            <label style="display: block; margin-bottom: 8px; font-weight: 500">Asal Sekolah/Instansi</label>
+            <input type="text" id="userSchool" required style="width: 100%; padding: 12px; border: 1px solid var(--light-gray); border-radius: 8px" />
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%">Lanjutkan ke Tes</button>
+        </form>
+      </div>
+
+      <!-- Tahap 2: Halaman Tes (Tersembunyi Awalnya) -->
+      <div class="test-container hidden" id="testQuestions">
+        <div class="test-header">
+          <div class="test-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">Pertanyaan <span id="currentQuestion">1</span> dari <span id="totalQuestions">20</span></div>
+          </div>
+        </div>
+
+        <div class="question-container">
+          <h3 class="question" id="questionText">Pertanyaan akan muncul di sini...</h3>
+          <div class="options-container" id="optionsContainer">
+            <!-- Opsi akan dimuat melalui JavaScript -->
+          </div>
+        </div>
+
+        <div class="test-navigation">
+          <button class="btn-secondary" id="prevBtn" disabled><i class="fas fa-arrow-left"></i> Sebelumnya</button>
+          <button class="btn-primary" id="nextBtn">Selanjutnya <i class="fas fa-arrow-right"></i></button>
+          <button class="btn-primary hidden" id="finishBtn">Lihat Hasil <i class="fas fa-chart-bar"></i></button>
+        </div>
+      </div>
+
+      <!-- Tahap 3: Hasil Tes (Tersembunyi Awalnya) -->
+      <div class="test-container hidden" id="testResults">
+        <div class="results-header">
+          <h3>Hasil Tes Minat & Bakat Anda</h3>
+          <p>Berdasarkan jawaban Anda, berikut rekomendasi jurusan yang sesuai</p>
+        </div>
+
+        <div class="results-content">
+          <div class="personality-summary">
+            <h4>Profil Kepribadian MBTI Anda</h4>
+            <div class="personality-traits">
+              <div class="trait">
+                <span class="trait-name">Tipe MBTI:</span>
+                <span class="trait-value" id="interestCategoryMBTI">INTJ</span>
+              </div>
+              <div class="trait">
+                <span class="trait-name">Gaya Belajar:</span>
+                <span class="trait-value" id="learningStyleMBTI">Analitis & Mandiri</span>
+              </div>
+              <div class="trait">
+                <span class="trait-name">Kekuatan:</span>
+                <span class="trait-value" id="personalityTypeMBTI">Strategis & Visioner</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="personality-summary">
+            <h4>Profil DISC Anda</h4>
+            <div class="personality-traits">
+              <div class="trait">
+                <span class="trait-name">Tipe DISC:</span>
+                <span class="trait-value" id="interestCategoryDISC">Dominance (D)</span>
+              </div>
+              <div class="trait">
+                <span class="trait-name">Gaya Belajar:</span>
+                <span class="trait-value" id="learningStyleDISC">Aktif & Mandiri</span>
+              </div>
+              <div class="trait">
+                <span class="trait-name">Kepribadian:</span>
+                <span class="trait-value" id="personalityTypeDISC">Tegas & Berorientasi Hasil</span>
+              </div>
+            </div>
+
+            <div class="personality-description" id="personalityDescription">
+              <!-- Deskripsi akan dimuat melalui JavaScript -->
+            </div>
+          </div>
+
+          <div class="recommendations">
+            <h4>Rekomendasi Jurusan untuk Anda</h4>
+            <div class="recommendation-cards" id="recommendationCards">
+              <!-- Rekomendasi akan dimuat melalui JavaScript -->
+            </div>
+          </div>
+
+          <div class="career-prospects">
+            <h4>Gambaran Karier</h4>
+            <p>Berdasarkan jurusan yang direkomendasikan, berikut prospek karier yang dapat Anda tekuni:</p>
+            <div class="career-list" id="careerList">
+              <!-- Daftar karier akan dimuat melalui JavaScript -->
+            </div>
+          </div>
+
+          <div class="results-actions">
+            <button class="btn-primary" id="saveResultsBtn"><i class="fas fa-download"></i> Simpan Hasil</button>
+            <a href="https://wa.me/89509017248" class="btn-secondary" id="consultResultBtn"><i class="fab fa-whatsapp"></i> Hubungi Kami</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
