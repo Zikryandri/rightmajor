@@ -190,8 +190,10 @@ header {
   gap: 10px;
 }
 
-.logo i {
-  font-size: 2rem;
+.logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -1323,6 +1325,14 @@ button[disabled] {
   .navbar {
     padding: 0 15px;
     position: relative;
+  }
+
+  .logo-image {
+    height: 30px; /* Logo sedikit lebih kecil di layar HP */
+  }
+
+  .logo span {
+    font-size: 1.2rem; /* Mengecilkan teks "RightMajor" di sebelahnya juga */
   }
 
   .nav-links,
