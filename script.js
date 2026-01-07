@@ -644,8 +644,19 @@ function init() {
   if (nextBtn) nextBtn.addEventListener("click", nextQuestion);
   if (finishBtn) finishBtn.addEventListener("click", finishTest);
   if (saveResultsBtn) saveResultsBtn.addEventListener("click", saveResults);
-  if (consultResultBtn) consultResultBtn.addEventListener("click", () => window.open("https://wa.me/62895701790702", "_blank"));
+  // Cari baris ini di dalam function init()
+  if (consultResultBtn) {
+    consultResultBtn.addEventListener("click", () => {
+      // Ambil nama user jika ada, kalau tidak pakai default
+      const userName = document.getElementById("userName").value || "Saya";
 
+      // Pesan Template
+      const message = `Halo Admin, nama saya ${userName}. Saya sudah menyelesaikan Tes Minat Bakat di RightMajor dan ingin konsultasi lebih lanjut mengenai hasilnya.`;
+
+      // Buka WhatsApp
+      window.open(`https://wa.me/62895701790702?text=${encodeURIComponent(message)}`, "_blank");
+    });
+  }
   // --- Tambahkan ini di script.js ---
 
   // Logic untuk Mobile Menu Toggle
